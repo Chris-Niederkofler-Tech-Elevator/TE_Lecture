@@ -9,6 +9,8 @@ public class PaintCalc {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
+		List<Rectangle> walls = new ArrayList<Rectangle>();
+		
 		while(true) {
 			
 			System.out.println();
@@ -25,18 +27,23 @@ public class PaintCalc {
 				int height = Integer.parseInt(scan.nextLine());
 				System.out.print("Enter wall width >>> ");
 				int width = Integer.parseInt(scan.nextLine());
-				int area = height * width;
-				System.out.println("Added "+height+"x"+width+" wall - "+area+" square feet");
+				
+				Rectangle wall = new Rectangle(height, width);
+				walls.add(wall);
+
+				System.out.println("Added "+height+"x"+width+" wall - "+ wall.getArea() +" square feet");
 				
 			} else if(userChoice.equals("2")) {
 				
-				// Here we need to sum up the areas of all walls that have been entered
-				System.out.println("Wall 1: 10x15 - 150 square feet"); // PROTOTYPE ONLY!!!
-				System.out.println("Wall 2: 10x15 - 150 square feet"); // PROTOTYPE ONLY!!!
-				System.out.println("Wall 3: 10x15 - 150 square feet"); // PROTOTYPE ONLY!!!
-				System.out.println("Wall 4: 10x15 - 150 square feet"); // PROTOTYPE ONLY!!!
+				int totalArea = 0; 
+				int wallCount = 0;
 				
-				int totalArea = 600; // PROTOTYPE ONLY!!!
+				for (Rectangle wall : walls) {
+					System.out.println("Wall " + ++wallCount + ": " + wall.toString());
+					totalArea += wall.getArea();
+				}
+				
+				// PROTOTYPE ONLY!!!
 				System.out.println("===============================");
 				System.out.println("Total Area: "+totalArea+" square feet");
 				
