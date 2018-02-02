@@ -10,7 +10,8 @@ public class StoreDemo {
 		System.out.println("Register 1 has " + register1.getRegisterMoney());
 		System.out.println("Register 2 has " + register2.getRegisterMoney());
 		System.out.println("Register 3 has " + register3.getRegisterMoney());
-		System.out.println("The store has " + StoreRegister.getStoreMoney());	
+		System.out.println("The store has " + StoreRegister.getStoreMoney());
+		
 	}
 	
 	

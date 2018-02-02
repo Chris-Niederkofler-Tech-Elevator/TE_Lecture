@@ -10,7 +10,7 @@ public class StoreRegister {
 	}
 	
 	public void purchaseItemAtRegister(double cash) {
-		registerMoney += cash;
+		this.registerMoney += cash;
 		storeMoney += cash;
 	}
 		
