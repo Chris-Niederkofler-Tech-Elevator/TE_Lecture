@@ -7,12 +7,10 @@ public class StoreDemo {
 	private StoreRegister register3 = new StoreRegister();
 	
 	public void printAmounts() {
-		System.out.print("Register 1 has " + register1.getRegisterMoney());
-		System.out.println(" - the store has " + register1.getStoreMoney());
-		System.out.print("Register 2 has " + register2.getRegisterMoney());
-		System.out.println(" - the store has " + register2.getStoreMoney());
-		System.out.print("Register 3 has " + register3.getRegisterMoney());
-		System.out.println(" - the store has " + register3.getStoreMoney());	
+		System.out.println("Register 1 has " + register1.getRegisterMoney());
+		System.out.println("Register 2 has " + register2.getRegisterMoney());
+		System.out.println("Register 3 has " + register3.getRegisterMoney());
+		System.out.println("The store has " + StoreRegister.getStoreMoney());	
 	}
 	
 	
@@ -64,10 +62,7 @@ public class StoreDemo {
 		System.out.println();
 		System.out.println("The Store is CLOSED!!!");
 		System.out.println("The final counts:");
-		System.out.println("Register 1 has: " + demo.getRegister1().getRegisterMoney());
-		System.out.println("Register 2 has: " + demo.getRegister2().getRegisterMoney());
-		System.out.println("Register 3 has: " + demo.getRegister3().getRegisterMoney());
-		System.out.println("The Store has: " + demo.getRegister1().getStoreMoney());
+		demo.printAmounts();
 	}
 
 }
