@@ -29,6 +29,11 @@ public class SiteController {
 		return "aboutUs";
 	}
 	
+	@RequestMapping("/ourPage")
+	public String showOurPage() {
+		return "ourPage";
+	}
+	
 	@RequestMapping("/forum")
 	public String showForumList(HttpServletRequest request) {
 		request.setAttribute("topicList", forumDao.readAllTopics());

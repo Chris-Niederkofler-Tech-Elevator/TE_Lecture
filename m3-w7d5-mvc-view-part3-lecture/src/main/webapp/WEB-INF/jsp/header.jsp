@@ -19,12 +19,16 @@
 
 <div id="content">
 
+<c:url value="/ourPage" var="ourPageURL" >
+	<c:param name="username">abcuser1</c:param>
+</c:url>
+
 <c:url value="/aboutUs" var="aboutUsURL" />    
     <nav>
     		<ul>
     			<li><a href="${homePageURL}">Home</a></li>
     			<li><a href="${aboutUsURL}">About Us</a></li>
-    			<li><a href="#">Another Link</a></li>
+    			<li><a href="${ourPageURL}">Our Page</a></li>
     		</ul>
     </nav>
     

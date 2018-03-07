@@ -45,7 +45,7 @@ public class NotificationController {
 	 * If the HTTP request does not include a value for a parameter, an exception is thrown
 	 * and the request fails (4xx error). If a parameter is optional, indicate this as follows:
 	 * 
-	 *     @RequestParam(optional=true) String myOptionalParam ...
+	 *     @RequestParam(required=false) String myOptionalParam ...
 	 * 
 	 * PARAMETER NAMES
 	 * ---------------
