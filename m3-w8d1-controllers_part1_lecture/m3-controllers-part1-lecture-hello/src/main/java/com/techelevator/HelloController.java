@@ -47,8 +47,9 @@ public class HelloController {
 	public String displayGreeting(HttpServletRequest request) {
 		
 		String name = request.getParameter("name");
-		Greeter greeter = new Greeter(name);
-		request.setAttribute("greeting", greeter.getGreeting());
+		
+		
+		request.setAttribute("displayText", "Hello, "+name+"!");
 		
 		/* Controller methods can return a variety of types of values, 
 		 * but we will be using `String`.  The value of the returned 

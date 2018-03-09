@@ -17,7 +17,7 @@
   <!-- This maps all application requests to the Spring DispatcherServlet -->
   <servlet-mapping>
     <servlet-name>springmvc</servlet-name>
-    <url-pattern>action/</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 	  
   <servlet-mapping>
