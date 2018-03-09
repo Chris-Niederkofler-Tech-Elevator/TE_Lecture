@@ -3,10 +3,12 @@ package com.techelevator.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.PersonName;
 
@@ -20,13 +22,17 @@ public class NameController {
 	}
 	
 	@RequestMapping(path="/nameCollectorResult", method=RequestMethod.GET)
-	public String displayNameCollectorResult(HttpServletRequest request) {
+	public String displayNameCollectorResult(HttpServletRequest request, Model model) {
 		
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
+//		if (model.containsAttribute("personName")) {
+//			PersonName personName = (PersonName) model.asMap().get("personName");
+//		}
 		
-		request.setAttribute("firstName", firstName);
-		request.setAttribute("lastName", lastName);
+//		String firstName = request.getParameter("firstName");
+//		String lastName = request.getParameter("lastName");
+//		
+//		request.setAttribute("firstName", firstName);
+//		request.setAttribute("lastName", lastName);
 		request.setAttribute("method", "GET");
 //		return "nameCollectorResult";
 		return "nameCollector";
@@ -35,10 +41,13 @@ public class NameController {
 	
 	@RequestMapping(path="/nameCollectorResult", method=RequestMethod.POST)
 	public String displayNameCollectorResultPost( 
-			PersonName personName, ModelMap model, HttpServletRequest request) {
-		request.setAttribute("firstName", personName.getFirstName());
-		request.setAttribute("lastName", personName.getLastName());
-		model.addAttribute("personName", personName);
+			PersonName personName, ModelMap model, HttpServletRequest request,
+			RedirectAttributes redirectAttr) {
+//		request.setAttribute("firstName", personName.getFirstName());
+//		request.setAttribute("lastName", personName.getLastName());
+//		model.addAttribute("personName", personName);
+		redirectAttr.addFlashAttribute("personName", personName);
+		
 		model.addAttribute("method", "POST");
 		return "redirect:/nameCollectorResult";
 		

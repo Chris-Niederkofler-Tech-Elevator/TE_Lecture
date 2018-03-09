@@ -39,6 +39,19 @@ public class MailingListController {
 		
 		return "redirect:/mailingList/thankYou";
 	}
+
+	// Alternate way without Redirect
+	// 	public String handleMailingListForm(
+	// 		@Valid @ModelAttribute("signup") SignUp signup, 
+	// 		BindingResult result,
+	// 		RedirectAttributes attr
+	// ) {
+	// 	if(result.hasErrors()) {
+	// 		return "mailingList";
+	// 	}
+		
+	// 	return "redirect:/mailingList/thankYou";
+	// }
 	
 	@RequestMapping(path="/thankYou", method=RequestMethod.GET)
 	public String showThankYou() {
