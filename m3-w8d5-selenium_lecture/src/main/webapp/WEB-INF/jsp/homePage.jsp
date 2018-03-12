@@ -2,7 +2,6 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-<h1>Logged in as: ${username}</h1>
 <section class="account">
   <img src="img/piggybank.png" alt="Start Savings">
   <h2 id="savings" class="heading">Start Saving</h2>
