@@ -62,7 +62,8 @@ mouseDownBox.on("mouseup", function (event) {
 
 //Click
 var clickBox = $("#click");
-clickBox.on("click", function (event) {
+//clickBox.on("click", function (event) {
+clickBox.click(function (event) {
     $(this).css("background", "blue");
 });
 
@@ -73,8 +74,8 @@ dblclickBox.on("dblclick", function (event) {
 });
 
 //Context Menu
-var rightclickBox = $("#rightclick");
-rightclickBox.on("contextmenu", function (event) {
+//var rightclickBox = $("#rightclick");
+$("#rightclick").on("contextmenu", function (event) {
     event.preventDefault();
     $(this).css("background", "violet");
     return false;

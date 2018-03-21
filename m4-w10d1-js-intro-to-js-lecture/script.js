@@ -23,7 +23,7 @@ var numberOfDaysPerWeek = 7;
 console.log("Number of Days Per Week " + numberOfDaysPerWeek);
 
 // this line declares a variable named `nameOfCompany` and assigns it a String value
-var nameOfCompany = "Tech Elevator"; 
+var nameOfCompany = 'Tech "E"levator' + " 'Test' "; 
 console.log("Name of Company" + nameOfCompany);
 
 // this line declares a variable named `weekdays` and assigns it an array of Strings
@@ -45,9 +45,8 @@ Assignment and Increment
 ########################
 */
 
-var numberOfQuarterBacks = 24;
+var numberOfQuarterBacks = 'twenty-four';
 console.log("Cleveland has " + numberOfQuarterBacks + " since they returned in 1999");
-
 var hasNumberOnePick = true;
 if (hasNumberOnePick) {
     numberOfQuarterBacks++;
@@ -273,6 +272,13 @@ console.log(word + " using .length is " + word.length);
 console.log(word + " using .indexOf('lev') is " + word.indexOf('lev'));
 console.log(word + " using .indexOf('lev') is " + word.indexOf('levitate'));
 
+var arr = [];
+arr.push(5);
+arr.push(4);
+arr.push(2);
+console.log("Length: " + arr.length);
+console.log("item: " + arr.pop());
+console.log("Length: " + arr.length);
 
 /*
 ########################
