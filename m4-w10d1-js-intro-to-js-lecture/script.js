@@ -22,8 +22,13 @@ Declaring a Variable
 var numberOfDaysPerWeek = 7; 
 console.log("Number of Days Per Week " + numberOfDaysPerWeek);
 // this line declares a variable named `nameOfCompany` and assigns it a String value
+<<<<<<< HEAD
 var nameOfCompany = "Tech Elevator"; 
 console.log("Name of Compan   y" + nameOfCompany);
+=======
+var nameOfCompany = 'Tech "E"levator' + " 'Test' "; 
+console.log("Name of Company" + nameOfCompany);
+>>>>>>> 3f3b3d0b2c918a00b38a890ba25c6eedd23d2dba
 
 // this line declares a variable named `weekdays` and assigns it an array of Strings
 var weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]; 
@@ -44,9 +49,8 @@ Assignment and Increment
 ########################
 */
 
-var numberOfQuarterBacks = 24;
+var numberOfQuarterBacks = 'twenty-four';
 console.log("Cleveland has " + numberOfQuarterBacks + " since they returned in 1999");
-
 var hasNumberOnePick = true;
 if (hasNumberOnePick) {
     numberOfQuarterBacks++;
@@ -272,6 +276,13 @@ console.log(word + " using .length is " + word.length);
 console.log(word + " using .indexOf('lev') is " + word.indexOf('lev'));
 console.log(word + " using .indexOf('lev') is " + word.indexOf('levitate'));
 
+var arr = [];
+arr.push(5);
+arr.push(4);
+arr.push(2);
+console.log("Length: " + arr.length);
+console.log("item: " + arr.pop());
+console.log("Length: " + arr.length);
 
 var arr = [];
 arr.push(5);

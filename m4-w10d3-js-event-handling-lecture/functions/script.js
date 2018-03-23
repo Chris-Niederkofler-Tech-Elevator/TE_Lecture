@@ -33,6 +33,7 @@ var thinkHappyThoughts = fly;
 
 thinkHappyThoughts(20);
 
+
 function filter(things, matcher) {
     var results = [];
     for(var i = 0; i < things.length; i++) {
@@ -57,9 +58,16 @@ function everyFourth(num){
     return num % 4 == 0;
 }
 
+function everyThird(num) {
+    return num % 3 == 0;
+}
+
 var input = [1,2,3,4,5,6,7,8,9];
 
 console.log(filter(input, evenNumbers));
 console.log(filter(input, oddNumbers));
 console.log(filter(input, everyThird));
 console.log(filter(input, everyFourth));
+
+
+
