@@ -19,12 +19,12 @@ $(document).ready(function () {
             },
             emailAddr: {
                 email: true,            //require this field to only accept email                
-                //required: {
+                // required: {
                 //    depends: function (element) {
                 //        return $("#chkEmail").is(":checked");
                 //    }
-                //},
-                techElevatorEmail: true, //uses custom validator for @techelevator.com
+                // },
+                techElevatorEmail: true  //uses custom validator for @techelevator.com
             },
             password: {
                 required: true,         //requires password field
@@ -43,7 +43,7 @@ $(document).ready(function () {
         },
         messages: {
             fName: {
-                required: "You must provide a first name"
+                required: "Hey we need a first name"
             },
             lName: {
                 required: "You must provide a last name",
